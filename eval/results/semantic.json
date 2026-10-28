@@ -1,0 +1,1691 @@
+{
+  "meta": {
+    "strategy": "semantic",
+    "chunk_size": 500,
+    "overlap": 100,
+    "embedding": "local",
+    "llm": "llama3.2",
+    "judge": "openai/gpt-oss-120b",
+    "min_retrieval_confidence": 0.3,
+    "retrieval_only": false,
+    "n_cases": 56,
+    "index": {
+      "signature": "semantic|500|100|local|81df9ee0e083",
+      "chunks": 25,
+      "avg_chars": 294.4,
+      "min_chars": 75,
+      "max_chars": 387,
+      "duplicates_skipped": 0
+    },
+    "timestamp": "2026-10-28 14:47:44"
+  },
+  "summary": {
+    "overall": {
+      "n": 56,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 0.9891,
+      "context_precision": 0.2696,
+      "answer_correctness": 0.8125,
+      "faithfulness": 0.9817,
+      "citation_accuracy": 0.9451,
+      "citation_coverage": 0.9248,
+      "false_refusal": 0.1087,
+      "hallucinated": 0.0,
+      "latency_s": 10.2484,
+      "overall_score": 0.9348
+    },
+    "ambiguous": {
+      "n": 8,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.375,
+      "answer_correctness": 0.4375,
+      "faithfulness": 0.9722,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.9028,
+      "false_refusal": 0.25,
+      "hallucinated": null,
+      "latency_s": 15.0563,
+      "overall_score": 0.8524
+    },
+    "lookup": {
+      "n": 28,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "answer_correctness": 0.8929,
+      "faithfulness": 1.0,
+      "citation_accuracy": 0.9537,
+      "citation_coverage": 0.9506,
+      "false_refusal": 0.0357,
+      "hallucinated": null,
+      "latency_s": 9.6861,
+      "overall_score": 0.9617
+    },
+    "multi_hop": {
+      "n": 10,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 0.95,
+      "context_precision": 0.38,
+      "answer_correctness": 0.7,
+      "faithfulness": 0.9271,
+      "citation_accuracy": 0.875,
+      "citation_coverage": 0.8542,
+      "false_refusal": 0.2,
+      "hallucinated": null,
+      "latency_s": 14.986,
+      "overall_score": 0.8755
+    },
+    "no_answer": {
+      "n": 10,
+      "retrieval_recall": null,
+      "retrieval_hit": null,
+      "retrieval_mrr": null,
+      "context_precision": null,
+      "answer_correctness": 1.0,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "citation_coverage": null,
+      "false_refusal": null,
+      "hallucinated": 0.0,
+      "latency_s": 3.239,
+      "overall_score": 1.0
+    }
+  },
+  "cases": [
+    {
+      "id": "L01",
+      "type": "lookup",
+      "question": "How many days of paid annual leave do full-time employees get?",
+      "retrieval_confidence": 0.991,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "Full-time employees receive 24 days of paid annual leave per calendar year [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the golden answer's key fact of 24 days per calendar year.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Full-time employees receive 24 days of paid annual leave per calendar year.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that full-time employees receive 24 days of paid annual leave per calendar year."
+        }
+      ],
+      "latency_s": 23.3
+    },
+    {
+      "id": "L02",
+      "type": "lookup",
+      "question": "How many unused vacation days can I carry over, and when do they expire?",
+      "retrieval_confidence": 0.833,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You can carry over up to 5 unused days of annual leave. They expire on March 31 [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches both key facts: up to 5 days and expiration on March 31.",
+      "n_claims": 2,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.5,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You can carry over up to 5 unused days of annual leave.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "They expire on March 31.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that carried-over days expire on March 31."
+        }
+      ],
+      "latency_s": 20.86
+    },
+    {
+      "id": "L03",
+      "type": "lookup",
+      "question": "How many paid sick days do employees get each year?",
+      "retrieval_confidence": 0.929,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "Employees receive 10 paid sick days per calendar year [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the exact number and condition of paid sick days.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Employees receive 10 paid sick days per calendar year.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states employees receive 10 paid sick days per calendar year."
+        }
+      ],
+      "latency_s": 22.47
+    },
+    {
+      "id": "L04",
+      "type": "lookup",
+      "question": "When do I need a medical certificate for sick leave?",
+      "retrieval_confidence": 0.799,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You need a medical certificate for sick leave when an absence lasts more than 3 consecutive days [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the key fact exactly.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You need a medical certificate for sick leave when an absence lasts more than 3 consecutive days.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source explicitly states a medical certificate is required for absences over 3 consecutive days."
+        }
+      ],
+      "latency_s": 17.98
+    },
+    {
+      "id": "L05",
+      "type": "lookup",
+      "question": "How long is parental leave for primary caregivers?",
+      "retrieval_confidence": 0.8,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "Primary caregivers receive 16 weeks of parental leave at full salary. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the key facts of 16 weeks at full salary.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Primary caregivers receive 16 weeks of parental leave at full salary.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that primary caregivers receive 16 weeks of parental leave at full salary."
+        }
+      ],
+      "latency_s": 16.86
+    },
+    {
+      "id": "L06",
+      "type": "lookup",
+      "question": "How much service do I need before I can take parental leave?",
+      "retrieval_confidence": 0.785,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "To be eligible for parental leave, you must have completed at least 6 months of service [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the required 6 months of service.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "To be eligible for parental leave, you must have completed at least 6 months of service.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that employees must have completed at least 6 months of service to be eligible for parental leave."
+        }
+      ],
+      "latency_s": 19.41
+    },
+    {
+      "id": "L07",
+      "type": "lookup",
+      "question": "How many days a week can I work remotely?",
+      "retrieval_confidence": 0.837,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You can work remotely up to 3 days per week [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Includes the 3‑day limit but omits the condition about completing the 3‑month probation period.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You can work remotely up to 3 days per week.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states employees may work remotely up to 3 days per week."
+        }
+      ],
+      "latency_s": 10.07
+    },
+    {
+      "id": "L08",
+      "type": "lookup",
+      "question": "What are the core hours when I must be online?",
+      "retrieval_confidence": 0.799,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You must be online during core hours of 10:00 to 15:00 in your local time zone [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate repeats the exact core hours and local time zone as in the golden answer.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You must be online during core hours of 10:00 to 15:00 in your local time zone.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the requirement to be online during core hours of 10:00 to 15:00 in local time zone."
+        }
+      ],
+      "latency_s": 1.09
+    },
+    {
+      "id": "L09",
+      "type": "lookup",
+      "question": "What is the home office stipend?",
+      "retrieval_confidence": 0.898,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The home office stipend is $600 for desk, chair, and monitor purchases, and an additional monthly internet allowance of $40. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the $600 one-time stipend and $40 monthly internet allowance.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The home office stipend is $600 for desk, chair, and monitor purchases, and an additional monthly internet allowance of $40.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states a $600 stipend for desk, chair, and monitor and a $40 monthly internet allowance."
+        }
+      ],
+      "latency_s": 0.89
+    },
+    {
+      "id": "L10",
+      "type": "lookup",
+      "question": "How many days per year can I work from another country?",
+      "retrieval_confidence": 0.836,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You can work from another country for up to 20 days per calendar year [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the key fact of 20 days per year.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You can work from another country for up to 20 days per calendar year.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states employees may work from another country for up to 20 days per calendar year."
+        }
+      ],
+      "latency_s": 19.8
+    },
+    {
+      "id": "L11",
+      "type": "lookup",
+      "question": "What is the minimum password length?",
+      "retrieval_confidence": 0.649,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The minimum password length is 14 characters long [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the minimum password length as 14 characters.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The minimum password length is 14 characters long.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states passwords must be at least 14 characters long."
+        }
+      ],
+      "latency_s": 8.37
+    },
+    {
+      "id": "L12",
+      "type": "lookup",
+      "question": "How often do I have to change my password?",
+      "retrieval_confidence": 0.797,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You must change your password every 180 days [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the key fact of changing password every 180 days.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You must change your password every 180 days.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states passwords must be changed every 180 days."
+        }
+      ],
+      "latency_s": 0.9
+    },
+    {
+      "id": "L13",
+      "type": "lookup",
+      "question": "How fast must a SEV1 incident be acknowledged?",
+      "retrieval_confidence": 0.801,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "A SEV1 incident must be acknowledged within 15 minutes [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the golden answer's key fact of 15 minutes.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "A SEV1 incident must be acknowledged within 15 minutes.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that a SEV1 incident must be acknowledged within 15 minutes."
+        }
+      ],
+      "latency_s": 0.92
+    },
+    {
+      "id": "L14",
+      "type": "lookup",
+      "question": "How many approvals does a pull request need?",
+      "retrieval_confidence": 0.823,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "A pull request needs at least 2 approvals, with one of them coming from a code owner [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate repeats both key facts accurately.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "A pull request needs at least 2 approvals, with one of them coming from a code owner.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that every pull request needs at least 2 approvals, one of which must be from a code owner."
+        }
+      ],
+      "latency_s": 19.86
+    },
+    {
+      "id": "L15",
+      "type": "lookup",
+      "question": "When are production deployments scheduled?",
+      "retrieval_confidence": 0.8,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "Production deployments are scheduled on Tuesdays and Thursdays at 14:00 UTC [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the exact schedule given in the golden answer.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Production deployments are scheduled on Tuesdays and Thursdays at 14:00 UTC.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states deployments run on Tuesdays and Thursdays at 14:00 UTC, matching the claim."
+        }
+      ],
+      "latency_s": 0.94
+    },
+    {
+      "id": "L16",
+      "type": "lookup",
+      "question": "When is the holiday deployment freeze?",
+      "retrieval_confidence": 0.8,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The holiday deployment freeze applies from December 20 to January 3 [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the exact dates of the freeze.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The holiday deployment freeze applies from December 20 to January 3.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the holiday deployment freeze runs from December 20 to January 3."
+        }
+      ],
+      "latency_s": 17.12
+    },
+    {
+      "id": "L17",
+      "type": "lookup",
+      "question": "How much is the on-call allowance?",
+      "retrieval_confidence": 0.819,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The on-call allowance is $250 per week [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the on-call allowance as $250 per week.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The on-call allowance is $250 per week.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the on-call allowance is $250 per week."
+        }
+      ],
+      "latency_s": 1.56
+    },
+    {
+      "id": "L18",
+      "type": "lookup",
+      "question": "How long do API bearer tokens last before they expire?",
+      "retrieval_confidence": 0.811,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "API bearer tokens expire after 60 minutes [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the token lifespan as 60 minutes.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "API bearer tokens expire after 60 minutes.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that bearer tokens expire after 60 minutes."
+        }
+      ],
+      "latency_s": 11.38
+    },
+    {
+      "id": "L19",
+      "type": "lookup",
+      "question": "What is the API rate limit?",
+      "retrieval_confidence": 0.042,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "insufficient_context",
+      "answer": "",
+      "false_refusal": 1.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "The system refused to answer an answerable question.",
+      "latency_s": 1.16
+    },
+    {
+      "id": "L20",
+      "type": "lookup",
+      "question": "What does error code NW-5003 mean and what should clients do?",
+      "retrieval_confidence": 0.799,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "NW-5003 means an upstream service timed out. Clients should retry with exponential backoff, starting at 1 second, up to a maximum of 5 retries [5].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate includes all key facts exactly as in the golden answer.",
+      "n_claims": 2,
+      "citation_accuracy": 0.0,
+      "citation_coverage": 0.5,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "NW-5003 means an upstream service timed out.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "Clients should retry with exponential backoff, starting at 1 second, up to a maximum of 5 retries.",
+          "citations": [
+            5
+          ],
+          "verdict": "unsupported",
+          "reason": "The source discusses deployment schedules and rollback policies, not client retry strategies."
+        }
+      ],
+      "latency_s": 1.2
+    },
+    {
+      "id": "L21",
+      "type": "lookup",
+      "question": "What is the hotel limit for a business trip to London?",
+      "retrieval_confidence": 0.79,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The hotel limit for a business trip to London is $250 per night. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the $250 per night limit exactly.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The hotel limit for a business trip to London is $250 per night.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source explicitly states the hotel limit for London is $250 per night."
+        }
+      ],
+      "latency_s": 1.39
+    },
+    {
+      "id": "L22",
+      "type": "lookup",
+      "question": "Who has to approve a $2,000 expense?",
+      "retrieval_confidence": 0.768,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "Expenses above $5,000 need approval from a VP and the Finance team [1]. Since $2,000 is below $5,000, it does not require VP and Finance team approval. However, it does require manager approval [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "Candidate says manager approval is needed, contradicting the golden answer that a director must approve $2,000 expenses.",
+      "n_claims": 3,
+      "citation_accuracy": 0.75,
+      "citation_coverage": 0.6666666666666666,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Expenses above $5,000 need approval from a VP and the Finance team.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that expenses above $5,000 require VP and Finance team approval."
+        },
+        {
+          "claim": "Since $2,000 is below $5,000, it does not require VP and Finance team approval.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "However, it does require manager approval.",
+          "citations": [
+            1
+          ],
+          "verdict": "partial",
+          "reason": "Source says only expenses under $500 need manager approval, not all items, so claim is only partially supported."
+        }
+      ],
+      "latency_s": 18.87
+    },
+    {
+      "id": "L23",
+      "type": "lookup",
+      "question": "What is the per-person limit for client meals and entertainment?",
+      "retrieval_confidence": 0.801,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The per-person limit for client meals and entertainment is $100. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the $100 per-person limit.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The per-person limit for client meals and entertainment is $100.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source explicitly states the $100 per-person limit."
+        }
+      ],
+      "latency_s": 0.92
+    },
+    {
+      "id": "L24",
+      "type": "lookup",
+      "question": "What share of the health insurance premium does the company pay for dependents?",
+      "retrieval_confidence": 0.798,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The company pays 70 percent of the health insurance premium for dependents. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the company pays 70% of the premium for dependents.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The company pays 70 percent of the health insurance premium for dependents.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the company pays 70% of the health insurance premium for dependents."
+        }
+      ],
+      "latency_s": 0.99
+    },
+    {
+      "id": "L25",
+      "type": "lookup",
+      "question": "How much does the company match in the 401(k) plan?",
+      "retrieval_confidence": 0.796,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The company offers a 4 percent employer match in the 401(k) plan. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the 4 percent employer match as in the golden answer.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The company offers a 4 percent employer match in the 401(k) plan.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states a 4 percent employer match in the 401(k) plan."
+        }
+      ],
+      "latency_s": 1.08
+    },
+    {
+      "id": "L26",
+      "type": "lookup",
+      "question": "How big is the annual learning budget?",
+      "retrieval_confidence": 0.798,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The annual learning budget is $1,200 per employee. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Provides the amount but omits manager approval requirement and rollover policy.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The annual learning budget is $1,200 per employee.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the annual learning budget is $1,200 per employee."
+        }
+      ],
+      "latency_s": 22.03
+    },
+    {
+      "id": "L27",
+      "type": "lookup",
+      "question": "How long is the probation period?",
+      "retrieval_confidence": 0.9,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The probation period lasts 3 months. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states the probation period as 3 months.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The probation period lasts 3 months.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the probation period lasts 3 months."
+        }
+      ],
+      "latency_s": 8.92
+    },
+    {
+      "id": "L28",
+      "type": "lookup",
+      "question": "By when must new hires complete security awareness training?",
+      "retrieval_confidence": 0.803,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "New hires must complete security awareness training within the first 14 days [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches the required timeframe exactly.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "New hires must complete security awareness training within the first 14 days.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source states security awareness training must be completed within 14 days, which covers new hires."
+        }
+      ],
+      "latency_s": 0.87
+    },
+    {
+      "id": "M01",
+      "type": "multi_hop",
+      "question": "I'm in my second month at the company. Can I work remotely three days a week?",
+      "retrieval_confidence": 0.796,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "No, you cannot work remotely three days a week. According to the remote work policy, employees may work remotely up to 3 days per week once they have completed the 3-month probation period [3]. Since you are in your second month, you have not yet completed the probation period, so you are not eligible for remote work [3].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate matches all key facts: remote work only after 3-month probation and second-month employee is ineligible.",
+      "n_claims": 3,
+      "citation_accuracy": 0.75,
+      "citation_coverage": 0.6666666666666666,
+      "faithfulness": 0.6666666666666666,
+      "claims": [
+        {
+          "claim": "No, you cannot work remotely three days a week.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "According to the remote work policy, employees may work remotely up to 3 days per week once they have completed the 3-month probation period.",
+          "citations": [
+            3
+          ],
+          "verdict": "partial",
+          "reason": "Source confirms remote work only after successful 3‑month probation, but does not specify a 3‑days‑per‑week limit."
+        },
+        {
+          "claim": "Since you are in your second month, you have not yet completed the probation period, so you are not eligible for remote work.",
+          "citations": [
+            3
+          ],
+          "verdict": "supported",
+          "reason": "Source states probation is 3 months and remote work is unavailable until it is completed, so being in the second month means not eligible."
+        }
+      ],
+      "latency_s": 21.13
+    },
+    {
+      "id": "M02",
+      "type": "multi_hop",
+      "question": "How do I claim the home office stipend and how long do I have to submit the claim?",
+      "retrieval_confidence": 0.899,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "To claim the home office stipend, you need to submit a claim through ExpensePro and provide receipts. [1] \n\nYou have 60 days from the purchase date to submit the claim. [1]",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate includes all key facts: use ExpensePro, provide receipts, and 60‑day deadline.",
+      "n_claims": 2,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "To claim the home office stipend, you need to submit a claim through ExpensePro and provide receipts.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly says stipend purchases are claimed through ExpensePro and receipts are required."
+        },
+        {
+          "claim": "You have 60 days from the purchase date to submit the claim.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the claim must be submitted within 60 days of purchase."
+        }
+      ],
+      "latency_s": 27.02
+    },
+    {
+      "id": "M03",
+      "type": "multi_hop",
+      "question": "Which tool do I use to request annual leave, and which one to claim learning budget purchases?",
+      "retrieval_confidence": 0.636,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "You use the PeopleHub portal to request annual leave [2]. To claim learning budget purchases, you use ExpensePro [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly identifies PeopleHub for annual leave and ExpensePro for learning budget claims.",
+      "n_claims": 2,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You use the PeopleHub portal to request annual leave.",
+          "citations": [
+            2
+          ],
+          "verdict": "supported",
+          "reason": "The source says all leave requests, including annual leave, are submitted via PeopleHub."
+        },
+        {
+          "claim": "To claim learning budget purchases, you use ExpensePro.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states learning budget purchases are claimed through ExpensePro."
+        }
+      ],
+      "latency_s": 21.08
+    },
+    {
+      "id": "M04",
+      "type": "multi_hop",
+      "question": "A deployment causes a 3 percent error rate and we suspect a confirmed data breach. What are the rollback and incident acknowledgement requirements?",
+      "retrieval_confidence": 0.154,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "insufficient_context",
+      "answer": "",
+      "false_refusal": 1.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "The system refused to answer an answerable question.",
+      "latency_s": 1.29
+    },
+    {
+      "id": "M05",
+      "type": "multi_hop",
+      "question": "My API call returned NW-1002. What does it mean and how do I get a new token?",
+      "retrieval_confidence": 0.884,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "NW-1002 means the token has expired and must be refreshed. [2] To get a new token, call the POST /v2/auth/refresh endpoint with the refresh token.",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "All key facts match the golden answer",
+      "n_claims": 2,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.5,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "NW-1002 means the token has expired and must be refreshed.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "To get a new token, call the POST /v2/auth/refresh endpoint with the refresh token.",
+          "citations": [
+            2
+          ],
+          "verdict": "supported",
+          "reason": "Source explicitly states that a new token is obtained by calling POST /v2/auth/refresh with the refresh token."
+        }
+      ],
+      "latency_s": 21.44
+    },
+    {
+      "id": "M06",
+      "type": "multi_hop",
+      "question": "What is special about Tuesdays at Northwind?",
+      "retrieval_confidence": 0.006,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 0.5,
+      "context_precision": 0.4,
+      "status": "insufficient_context",
+      "answer": "",
+      "false_refusal": 1.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "The system refused to answer an answerable question.",
+      "latency_s": 0.82
+    },
+    {
+      "id": "M07",
+      "type": "multi_hop",
+      "question": "What approvals and security rules apply if I want to work from another country with my company laptop?",
+      "retrieval_confidence": 0.778,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "To work from another country with your company laptop, you need approval from both your manager [3] and the Security team [1]. Additionally, you must use the company VPN at all times while abroad [1]. You must also report your laptop as lost or stolen to the Security team within 1 hour of discovery [2].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Candidate includes approvals and VPN requirement but omits 30‑day notice, encryption requirement, and 20‑day limit.",
+      "n_claims": 3,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "To work from another country with your company laptop, you need approval from both your manager  and the Security team.",
+          "citations": [
+            1,
+            3
+          ],
+          "verdict": "supported",
+          "reason": "Source states that approval from both the manager and the Security team is required to work from another country."
+        },
+        {
+          "claim": "Additionally, you must use the company VPN at all times while abroad.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that employees must use the company VPN at all times while abroad."
+        },
+        {
+          "claim": "You must also report your laptop as lost or stolen to the Security team within 1 hour of discovery.",
+          "citations": [
+            2
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that a lost or stolen device must be reported within 1 hour, matching the claim."
+        }
+      ],
+      "latency_s": 29.69
+    },
+    {
+      "id": "M08",
+      "type": "multi_hop",
+      "question": "Will I be able to request leave in PeopleHub from my very first day?",
+      "retrieval_confidence": 0.762,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "Yes, you will be able to request leave in PeopleHub from your very first day [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states you can request leave from day one, matching the golden answer.",
+      "n_claims": 1,
+      "citation_accuracy": 0.5,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "Yes, you will be able to request leave in PeopleHub from your very first day.",
+          "citations": [
+            1
+          ],
+          "verdict": "partial",
+          "reason": "Source confirms leave requests go through PeopleHub but does not address the claim about being able to request leave on the first day."
+        }
+      ],
+      "latency_s": 25.43
+    },
+    {
+      "id": "M09",
+      "type": "multi_hop",
+      "question": "How much do the wellness stipend and the learning budget add up to in a year?",
+      "retrieval_confidence": 0.8,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "The wellness stipend is $50 per month, so in a year it would be $50 * 12 = $600 [1]. The learning budget is $1,200 per employee per year. \n\nThe total of the wellness stipend and the learning budget in a year is $600 + $1,200 = $1,800 [1][2].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate correctly states $600 yearly stipend, $1,200 learning budget, and $1,800 total.",
+      "n_claims": 3,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.6666666666666666,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The wellness stipend is $50 per month, so in a year it would be $50 * 12 = $600.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source confirms $50/month, which correctly totals $600 annually."
+        },
+        {
+          "claim": "The learning budget is $1,200 per employee per year.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "The total of the wellness stipend and the learning budget in a year is $600 + $1,200 = $1,800.",
+          "citations": [
+            1,
+            2
+          ],
+          "verdict": "supported",
+          "reason": "The source states a $50/month wellness stipend ($600/year) and a $1,200 learning budget, which sum to $1,800."
+        }
+      ],
+      "latency_s": 1.02
+    },
+    {
+      "id": "M10",
+      "type": "multi_hop",
+      "question": "What do I need to set up on my new laptop for security, and by when must I finish security training?",
+      "retrieval_confidence": 0.442,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "To set up your new laptop for security, you need to enable full-disk encryption [2] and install the company password manager, Vaultline [5]. \n\nYou must complete security awareness training within the first 14 days [1] and code of conduct training within 30 days [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Candidate includes full-disk encryption and correct training deadline but omits screen lock and OS update requirements.",
+      "n_claims": 2,
+      "citation_accuracy": 0.75,
+      "citation_coverage": 1.0,
+      "faithfulness": 0.75,
+      "claims": [
+        {
+          "claim": "To set up your new laptop for security, you need to enable full-disk encryption  and install the company password manager, Vaultline.",
+          "citations": [
+            2,
+            5
+          ],
+          "verdict": "partial",
+          "reason": "Source confirms full-disk encryption and names Vaultline as the password manager, but does not explicitly state you must install it."
+        },
+        {
+          "claim": "You must complete security awareness training within the first 14 days  and code of conduct training within 30 days.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the same 14‑day and 30‑day deadlines for the trainings."
+        }
+      ],
+      "latency_s": 0.94
+    },
+    {
+      "id": "N01",
+      "type": "no_answer",
+      "question": "What is the company's policy on bringing pets to the office?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 0.81
+    },
+    {
+      "id": "N02",
+      "type": "no_answer",
+      "question": "How large is the annual bonus for senior engineers?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 0.78
+    },
+    {
+      "id": "N03",
+      "type": "no_answer",
+      "question": "What is the name of the company's CEO?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 1.33
+    },
+    {
+      "id": "N04",
+      "type": "no_answer",
+      "question": "Does the company offer dental insurance?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 1.39
+    },
+    {
+      "id": "N05",
+      "type": "no_answer",
+      "question": "What is the process for requesting a salary raise?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 0.92
+    },
+    {
+      "id": "N06",
+      "type": "no_answer",
+      "question": "How many days of bereavement leave are available?",
+      "retrieval_confidence": 0.664,
+      "status": "answered",
+      "answer": "There is no information about bereavement leave in the provided context.",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "n_claims": 0,
+      "citation_accuracy": null,
+      "citation_coverage": null,
+      "claims": [
+        {
+          "claim": "There is no information about bereavement leave in the provided context.",
+          "citations": [],
+          "verdict": "gap",
+          "reason": "States a gap in the documents."
+        }
+      ],
+      "latency_s": 23.27
+    },
+    {
+      "id": "N07",
+      "type": "no_answer",
+      "question": "Which cloud provider hosts the production environment?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 0.89
+    },
+    {
+      "id": "N08",
+      "type": "no_answer",
+      "question": "What is the office dress code?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 1.05
+    },
+    {
+      "id": "N09",
+      "type": "no_answer",
+      "question": "What is the rate limit for the v3 API?",
+      "retrieval_confidence": 0.125,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 0.79
+    },
+    {
+      "id": "N10",
+      "type": "no_answer",
+      "question": "What is the stock option vesting schedule?",
+      "retrieval_confidence": 0.0,
+      "status": "insufficient_context",
+      "answer": "",
+      "hallucinated": 0.0,
+      "answer_correctness": 1.0,
+      "latency_s": 1.16
+    },
+    {
+      "id": "A01",
+      "type": "ambiguous",
+      "question": "How many days off do I get?",
+      "retrieval_confidence": 0.664,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "You receive 24 days of paid annual leave per calendar year [1]. You also receive 10 paid sick days per calendar year [2]. Additionally, you may work remotely up to 3 days per week, but this does not directly translate to days off.",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Includes annual and sick leave but omits parental leave details",
+      "n_claims": 3,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.6666666666666666,
+      "faithfulness": 0.8333333333333334,
+      "claims": [
+        {
+          "claim": "You receive 24 days of paid annual leave per calendar year.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that full-time employees receive 24 days of paid annual leave per calendar year."
+        },
+        {
+          "claim": "You also receive 10 paid sick days per calendar year.",
+          "citations": [
+            2
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states employees receive 10 paid sick days per calendar year."
+        },
+        {
+          "claim": "Additionally, you may work remotely up to 3 days per week, but this does not directly translate to days off.",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        }
+      ],
+      "latency_s": 29.29
+    },
+    {
+      "id": "A02",
+      "type": "ambiguous",
+      "question": "How long do I have to submit my claim?",
+      "retrieval_confidence": 0.886,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "For standard expense claims, you must submit your claim within 30 days of the expense date [1]. However, the home office stipend has its own 60-day window [2].",
+      "false_refusal": 0.0,
+      "answer_correctness": 1.0,
+      "correctness_reason": "Candidate includes both 30‑day rule for standard expenses and 60‑day rule for home office stipend, matching the golden answer.",
+      "n_claims": 2,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "For standard expense claims, you must submit your claim within 30 days of the expense date.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states standard expense claims must be submitted within 30 days of the expense date."
+        },
+        {
+          "claim": "However, the home office stipend has its own 60-day window.",
+          "citations": [
+            2
+          ],
+          "verdict": "supported",
+          "reason": "Source states the stipend claim must be submitted within 60 days, confirming a 60-day window."
+        }
+      ],
+      "latency_s": 30.16
+    },
+    {
+      "id": "A03",
+      "type": "ambiguous",
+      "question": "How many approvals do I need?",
+      "retrieval_confidence": 0.838,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "You need at least 2 approvals, with one of them coming from a code owner [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Only mentions pull request approvals, missing the expense approval thresholds.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You need at least 2 approvals, with one of them coming from a code owner.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the same requirement of at least 2 approvals with one from a code owner."
+        }
+      ],
+      "latency_s": 21.44
+    },
+    {
+      "id": "A04",
+      "type": "ambiguous",
+      "question": "How soon do I need to report it?",
+      "retrieval_confidence": 0.711,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "You need to report security incidents immediately, with specific timeframes for different severity levels: \n\n* SEV1 incidents must be acknowledged within 15 minutes [1].\n* SEV2 incidents must be acknowledged within 1 hour [1].\n* SEV3 incidents must be acknowledged by the next business day [1].\n* Urgent incidents are raised in the #sec-incident channel, but the timeframe for reporting is not specified in the provided context.\n\nThe context does not cover the specific timeframe for reporting non-security incidents.",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Candidate lists correct SEV timeframes but omits the 1‑hour reporting requirement for lost or stolen devices.",
+      "n_claims": 4,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 0.75,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You need to report security incidents immediately, with specific timeframes for different severity levels:",
+          "citations": [],
+          "verdict": "uncited",
+          "reason": "No citation given."
+        },
+        {
+          "claim": "SEV1 incidents must be acknowledged within 15 minutes.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states SEV1 incidents must be acknowledged within 15 minutes."
+        },
+        {
+          "claim": "SEV2 incidents must be acknowledged within 1 hour.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states that a SEV2 incident must be acknowledged within 1 hour."
+        },
+        {
+          "claim": "SEV3 incidents must be acknowledged by the next business day.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states SEV3 incidents must be acknowledged by the next business day."
+        },
+        {
+          "claim": "Urgent incidents are raised in the #sec-incident channel, but the timeframe for reporting is not specified in the provided context.",
+          "citations": [],
+          "verdict": "gap",
+          "reason": "States a gap in the documents."
+        },
+        {
+          "claim": "The context does not cover the specific timeframe for reporting non-security incidents.",
+          "citations": [],
+          "verdict": "gap",
+          "reason": "States a gap in the documents."
+        }
+      ],
+      "latency_s": 0.91
+    },
+    {
+      "id": "A05",
+      "type": "ambiguous",
+      "question": "What is the maximum I can claim?",
+      "retrieval_confidence": 0.008,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "insufficient_context",
+      "answer": "",
+      "false_refusal": 1.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "The system refused to answer an answerable question.",
+      "latency_s": 1.14
+    },
+    {
+      "id": "A06",
+      "type": "ambiguous",
+      "question": "How many weeks of leave can I take for a new baby?",
+      "retrieval_confidence": 0.638,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.2,
+      "status": "answered",
+      "answer": "You can take 16 weeks of parental leave at full salary for a new baby [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Only mentions the 16‑week primary caregiver entitlement, omitting the 6‑week secondary caregiver entitlement and the 6‑month service requirement.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "You can take 16 weeks of parental leave at full salary for a new baby.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "Source confirms primary caregivers receive 16 weeks of full‑salary parental leave."
+        }
+      ],
+      "latency_s": 17.36
+    },
+    {
+      "id": "A07",
+      "type": "ambiguous",
+      "question": "How many days can I be away from the office?",
+      "retrieval_confidence": 0.195,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "insufficient_context",
+      "answer": "",
+      "false_refusal": 1.0,
+      "answer_correctness": 0.0,
+      "correctness_reason": "The system refused to answer an answerable question.",
+      "latency_s": 0.89
+    },
+    {
+      "id": "A08",
+      "type": "ambiguous",
+      "question": "What is the monthly allowance?",
+      "retrieval_confidence": 0.54,
+      "retrieval_recall": 1.0,
+      "retrieval_hit": 1.0,
+      "retrieval_mrr": 1.0,
+      "context_precision": 0.4,
+      "status": "answered",
+      "answer": "The monthly internet allowance is $40 [1].",
+      "false_refusal": 0.0,
+      "answer_correctness": 0.5,
+      "correctness_reason": "Only mentions the $40 internet allowance, omitting the $50 wellness stipend.",
+      "n_claims": 1,
+      "citation_accuracy": 1.0,
+      "citation_coverage": 1.0,
+      "faithfulness": 1.0,
+      "claims": [
+        {
+          "claim": "The monthly internet allowance is $40.",
+          "citations": [
+            1
+          ],
+          "verdict": "supported",
+          "reason": "The source explicitly states the monthly internet allowance is $40."
+        }
+      ],
+      "latency_s": 19.26
+    }
+  ]
+}

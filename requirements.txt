@@ -1,0 +1,14 @@
+openai
+chromadb
+rank-bm25
+langchain-text-splitters
+pypdf
+beautifulsoup4
+python-dotenv
+numpy
+sentence-transformers
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+pytest

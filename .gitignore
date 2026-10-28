@@ -1,0 +1,11 @@
+
+.venv/
+.env
+data/
+__pycache__/
+*.pyc
+*.bak
+.pytest_cache/
+.hf_cache/
+eval/runs/
+eval/.llm_cache.jsonl

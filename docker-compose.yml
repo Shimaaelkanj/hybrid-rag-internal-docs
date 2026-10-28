@@ -1,0 +1,55 @@
+services:
+  chroma:
+    image: chromadb/chroma:${CHROMA_VERSION:?Set CHROMA_VERSION in your .env file}
+    environment:
+      IS_PERSISTENT: "TRUE"
+      PERSIST_DIRECTORY: /data
+      ANONYMIZED_TELEMETRY: "FALSE"
+    volumes:
+      - chroma_data:/data
+    ports:
+      - "8001:8000"          # optional: lets you inspect Chroma from your PC
+
+  api:
+    build:
+      context: .
+      args:
+        CHROMA_VERSION: ${CHROMA_VERSION}
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      SEED_ON_START: "true"
+      EMBEDDING_PROVIDER: local
+      # LLM: defaults to Ollama running on your PC. For a hosted model set LLM_BASE_URL,
+      # LLM_API_KEY and LLM_MODEL in your .env file.
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-ollama}
+      LLM_MODEL: ${LLM_MODEL:-llama3.2}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - rag_data:/app/data   # BM25 index, chunk store and raw uploads
+    depends_on:
+      - chroma
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/v1/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 120s
+
+  dashboard:
+    build: ./dashboard
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  chroma_data:
+  rag_data:

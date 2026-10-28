@@ -1,0 +1,700 @@
+[
+  {
+    "id": "L01",
+    "type": "lookup",
+    "question": "How many days of paid annual leave do full-time employees get?",
+    "golden_answer": "24 days per calendar year.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "24 days of paid annual leave"
+      }
+    ]
+  },
+  {
+    "id": "L02",
+    "type": "lookup",
+    "question": "How many unused vacation days can I carry over, and when do they expire?",
+    "golden_answer": "Up to 5 unused days can be carried over, and they expire on March 31.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "Up to 5 unused days may be carried over"
+      }
+    ]
+  },
+  {
+    "id": "L03",
+    "type": "lookup",
+    "question": "How many paid sick days do employees get each year?",
+    "golden_answer": "10 paid sick days per calendar year.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "10 paid sick days per calendar year"
+      }
+    ]
+  },
+  {
+    "id": "L04",
+    "type": "lookup",
+    "question": "When do I need a medical certificate for sick leave?",
+    "golden_answer": "When an absence lasts more than 3 consecutive days.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "more than 3 consecutive days"
+      }
+    ]
+  },
+  {
+    "id": "L05",
+    "type": "lookup",
+    "question": "How long is parental leave for primary caregivers?",
+    "golden_answer": "16 weeks at full salary.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "16 weeks of parental leave at full salary"
+      }
+    ]
+  },
+  {
+    "id": "L06",
+    "type": "lookup",
+    "question": "How much service do I need before I can take parental leave?",
+    "golden_answer": "At least 6 months of service.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "at least 6 months of service"
+      }
+    ]
+  },
+  {
+    "id": "L07",
+    "type": "lookup",
+    "question": "How many days a week can I work remotely?",
+    "golden_answer": "Up to 3 days per week, once the 3-month probation period is completed.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "up to 3 days per week"
+      }
+    ]
+  },
+  {
+    "id": "L08",
+    "type": "lookup",
+    "question": "What are the core hours when I must be online?",
+    "golden_answer": "10:00 to 15:00 in the employee's local time zone.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "core hours of 10:00 to 15:00"
+      }
+    ]
+  },
+  {
+    "id": "L09",
+    "type": "lookup",
+    "question": "What is the home office stipend?",
+    "golden_answer": "A one-time stipend of $600 for desk, chair, and monitor purchases, plus a monthly internet allowance of $40.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "one-time home office stipend of $600"
+      }
+    ]
+  },
+  {
+    "id": "L10",
+    "type": "lookup",
+    "question": "How many days per year can I work from another country?",
+    "golden_answer": "Up to 20 days per calendar year.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "up to 20 days per calendar year"
+      }
+    ]
+  },
+  {
+    "id": "L11",
+    "type": "lookup",
+    "question": "What is the minimum password length?",
+    "golden_answer": "At least 14 characters.",
+    "evidence": [
+      {
+        "source": "it_security_policy.md",
+        "phrase": "at least 14 characters long"
+      }
+    ]
+  },
+  {
+    "id": "L12",
+    "type": "lookup",
+    "question": "How often do I have to change my password?",
+    "golden_answer": "Every 180 days.",
+    "evidence": [
+      {
+        "source": "it_security_policy.md",
+        "phrase": "changed every 180 days"
+      }
+    ]
+  },
+  {
+    "id": "L13",
+    "type": "lookup",
+    "question": "How fast must a SEV1 incident be acknowledged?",
+    "golden_answer": "Within 15 minutes.",
+    "evidence": [
+      {
+        "source": "it_security_policy.md",
+        "phrase": "must be acknowledged within 15 minutes"
+      }
+    ]
+  },
+  {
+    "id": "L14",
+    "type": "lookup",
+    "question": "How many approvals does a pull request need?",
+    "golden_answer": "At least 2 approvals, and one must come from a code owner.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "at least 2 approvals"
+      }
+    ]
+  },
+  {
+    "id": "L15",
+    "type": "lookup",
+    "question": "When are production deployments scheduled?",
+    "golden_answer": "Tuesdays and Thursdays at 14:00 UTC.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "Tuesdays and Thursdays at 14:00 UTC"
+      }
+    ]
+  },
+  {
+    "id": "L16",
+    "type": "lookup",
+    "question": "When is the holiday deployment freeze?",
+    "golden_answer": "From December 20 to January 3.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "December 20 to January 3"
+      }
+    ]
+  },
+  {
+    "id": "L17",
+    "type": "lookup",
+    "question": "How much is the on-call allowance?",
+    "golden_answer": "$250 per week.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "on-call allowance is $250 per week"
+      }
+    ]
+  },
+  {
+    "id": "L18",
+    "type": "lookup",
+    "question": "How long do API bearer tokens last before they expire?",
+    "golden_answer": "60 minutes.",
+    "evidence": [
+      {
+        "source": "api_reference.md",
+        "phrase": "which expire after 60 minutes"
+      }
+    ]
+  },
+  {
+    "id": "L19",
+    "type": "lookup",
+    "question": "What is the API rate limit?",
+    "golden_answer": "100 requests per minute per API key; requests over the limit receive HTTP 429 with a Retry-After header.",
+    "evidence": [
+      {
+        "source": "api_reference.md",
+        "phrase": "limited to 100 requests per minute"
+      }
+    ]
+  },
+  {
+    "id": "L20",
+    "type": "lookup",
+    "question": "What does error code NW-5003 mean and what should clients do?",
+    "golden_answer": "An upstream service timed out; clients should retry with exponential backoff, starting at 1 second, up to 5 retries.",
+    "evidence": [
+      {
+        "source": "api_reference.md",
+        "phrase": "NW-5003 means an upstream service timed out"
+      }
+    ]
+  },
+  {
+    "id": "L21",
+    "type": "lookup",
+    "question": "What is the hotel limit for a business trip to London?",
+    "golden_answer": "$250 per night.",
+    "evidence": [
+      {
+        "source": "expense_policy.md",
+        "phrase": "$250 per night in San Francisco, New York, and London"
+      }
+    ]
+  },
+  {
+    "id": "L22",
+    "type": "lookup",
+    "question": "Who has to approve a $2,000 expense?",
+    "golden_answer": "A director (expenses from $500 to $5,000 need director approval).",
+    "evidence": [
+      {
+        "source": "expense_policy.md",
+        "phrase": "Expenses from $500 to $5,000 need director approval"
+      }
+    ]
+  },
+  {
+    "id": "L23",
+    "type": "lookup",
+    "question": "What is the per-person limit for client meals and entertainment?",
+    "golden_answer": "$100 per person.",
+    "evidence": [
+      {
+        "source": "expense_policy.md",
+        "phrase": "limited to $100 per person"
+      }
+    ]
+  },
+  {
+    "id": "L24",
+    "type": "lookup",
+    "question": "What share of the health insurance premium does the company pay for dependents?",
+    "golden_answer": "70 percent.",
+    "evidence": [
+      {
+        "source": "benefits_overview.md",
+        "phrase": "70 percent for dependents"
+      }
+    ]
+  },
+  {
+    "id": "L25",
+    "type": "lookup",
+    "question": "How much does the company match in the 401(k) plan?",
+    "golden_answer": "A 4 percent employer match.",
+    "evidence": [
+      {
+        "source": "benefits_overview.md",
+        "phrase": "401(k) plan with a 4 percent employer match"
+      }
+    ]
+  },
+  {
+    "id": "L26",
+    "type": "lookup",
+    "question": "How big is the annual learning budget?",
+    "golden_answer": "$1,200 per employee per year, with prior manager approval; unused budget does not roll over.",
+    "evidence": [
+      {
+        "source": "benefits_overview.md",
+        "phrase": "annual learning budget is $1,200 per employee"
+      }
+    ]
+  },
+  {
+    "id": "L27",
+    "type": "lookup",
+    "question": "How long is the probation period?",
+    "golden_answer": "3 months.",
+    "evidence": [
+      {
+        "source": "onboarding_guide.md",
+        "phrase": "The probation period lasts 3 months"
+      }
+    ]
+  },
+  {
+    "id": "L28",
+    "type": "lookup",
+    "question": "By when must new hires complete security awareness training?",
+    "golden_answer": "Within the first 14 days.",
+    "evidence": [
+      {
+        "source": "onboarding_guide.md",
+        "phrase": "completed within the first 14 days"
+      }
+    ]
+  },
+  {
+    "id": "M01",
+    "type": "multi_hop",
+    "question": "I'm in my second month at the company. Can I work remotely three days a week?",
+    "golden_answer": "No. Remote work is only available after the 3-month probation period is completed, and the probation period lasts 3 months, so someone in their second month is still on probation.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "once they have completed the 3-month probation period"
+      },
+      {
+        "source": "onboarding_guide.md",
+        "phrase": "Remote work is not available until probation has been completed successfully"
+      }
+    ]
+  },
+  {
+    "id": "M02",
+    "type": "multi_hop",
+    "question": "How do I claim the home office stipend and how long do I have to submit the claim?",
+    "golden_answer": "Claim it through ExpensePro with receipts within 60 days of the purchase date. This is the one exception to the standard 30-day claim deadline.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "within 60 days of the purchase date"
+      },
+      {
+        "source": "expense_policy.md",
+        "phrase": "the only exception to the 30-day rule"
+      }
+    ]
+  },
+  {
+    "id": "M03",
+    "type": "multi_hop",
+    "question": "Which tool do I use to request annual leave, and which one to claim learning budget purchases?",
+    "golden_answer": "Annual leave requests go through the PeopleHub portal; learning budget purchases are claimed through ExpensePro after prior manager approval.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "submitted and approved through the PeopleHub portal"
+      },
+      {
+        "source": "benefits_overview.md",
+        "phrase": "claimed through ExpensePro"
+      }
+    ]
+  },
+  {
+    "id": "M04",
+    "type": "multi_hop",
+    "question": "A deployment causes a 3 percent error rate and we suspect a confirmed data breach. What are the rollback and incident acknowledgement requirements?",
+    "golden_answer": "The error rate exceeds 2 percent, so the release must be rolled back within 10 minutes. A confirmed data breach is a SEV1 incident, which must be acknowledged within 15 minutes.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "rolled back within 10 minutes"
+      },
+      {
+        "source": "it_security_policy.md",
+        "phrase": "must be acknowledged within 15 minutes"
+      }
+    ]
+  },
+  {
+    "id": "M05",
+    "type": "multi_hop",
+    "question": "My API call returned NW-1002. What does it mean and how do I get a new token?",
+    "golden_answer": "NW-1002 means the token has expired. Get a new token by calling POST /v2/auth/refresh with the refresh token.",
+    "evidence": [
+      {
+        "source": "api_reference.md",
+        "phrase": "NW-1002 means the token has expired"
+      },
+      {
+        "source": "api_reference.md",
+        "phrase": "calling POST /v2/auth/refresh"
+      }
+    ]
+  },
+  {
+    "id": "M06",
+    "type": "multi_hop",
+    "question": "What is special about Tuesdays at Northwind?",
+    "golden_answer": "Tuesday is the team anchor day when every team works in the office, and it is also one of the two production deployment days (Tuesdays and Thursdays at 14:00 UTC).",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "every team works in the office on Tuesdays"
+      },
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "Tuesdays and Thursdays at 14:00 UTC"
+      }
+    ]
+  },
+  {
+    "id": "M07",
+    "type": "multi_hop",
+    "question": "What approvals and security rules apply if I want to work from another country with my company laptop?",
+    "golden_answer": "You need approval from both your manager and the Security team, requested at least 30 days before departure; you must use the company VPN at all times; and the laptop must have full-disk encryption enabled. The limit is 20 days per calendar year.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "approval from both the manager and the Security team"
+      },
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "use the company VPN at all times while abroad"
+      },
+      {
+        "source": "it_security_policy.md",
+        "phrase": "full-disk encryption enabled"
+      }
+    ]
+  },
+  {
+    "id": "M08",
+    "type": "multi_hop",
+    "question": "Will I be able to request leave in PeopleHub from my very first day?",
+    "golden_answer": "Yes. PeopleHub accounts are created before the start date, and leave requests are submitted and approved through the PeopleHub portal.",
+    "evidence": [
+      {
+        "source": "onboarding_guide.md",
+        "phrase": "Accounts for email, Slack, and PeopleHub are created before the start date"
+      },
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "submitted and approved through the PeopleHub portal"
+      }
+    ]
+  },
+  {
+    "id": "M09",
+    "type": "multi_hop",
+    "question": "How much do the wellness stipend and the learning budget add up to in a year?",
+    "golden_answer": "The wellness stipend is $50 per month, which is $600 per year, plus the $1,200 annual learning budget, for a total of $1,800.",
+    "evidence": [
+      {
+        "source": "benefits_overview.md",
+        "phrase": "wellness stipend of $50 per month"
+      },
+      {
+        "source": "benefits_overview.md",
+        "phrase": "annual learning budget is $1,200 per employee"
+      }
+    ]
+  },
+  {
+    "id": "M10",
+    "type": "multi_hop",
+    "question": "What do I need to set up on my new laptop for security, and by when must I finish security training?",
+    "golden_answer": "Enable full-disk encryption, set the screen to lock after 5 minutes of inactivity, and install operating system updates within 7 days of release. Security awareness training must be completed within the first 14 days.",
+    "evidence": [
+      {
+        "source": "it_security_policy.md",
+        "phrase": "full-disk encryption enabled"
+      },
+      {
+        "source": "onboarding_guide.md",
+        "phrase": "completed within the first 14 days"
+      }
+    ]
+  },
+  {
+    "id": "N01",
+    "type": "no_answer",
+    "question": "What is the company's policy on bringing pets to the office?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N02",
+    "type": "no_answer",
+    "question": "How large is the annual bonus for senior engineers?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N03",
+    "type": "no_answer",
+    "question": "What is the name of the company's CEO?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N04",
+    "type": "no_answer",
+    "question": "Does the company offer dental insurance?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N05",
+    "type": "no_answer",
+    "question": "What is the process for requesting a salary raise?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N06",
+    "type": "no_answer",
+    "question": "How many days of bereavement leave are available?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N07",
+    "type": "no_answer",
+    "question": "Which cloud provider hosts the production environment?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N08",
+    "type": "no_answer",
+    "question": "What is the office dress code?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N09",
+    "type": "no_answer",
+    "question": "What is the rate limit for the v3 API?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "N10",
+    "type": "no_answer",
+    "question": "What is the stock option vesting schedule?",
+    "golden_answer": "The documents do not contain this information.",
+    "evidence": []
+  },
+  {
+    "id": "A01",
+    "type": "ambiguous",
+    "question": "How many days off do I get?",
+    "golden_answer": "It depends on the type of leave: 24 days of paid annual leave per calendar year, 10 paid sick days per calendar year, and separate parental leave (16 weeks for primary caregivers, 6 weeks for secondary caregivers).",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "24 days of paid annual leave"
+      },
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "10 paid sick days per calendar year"
+      }
+    ]
+  },
+  {
+    "id": "A02",
+    "type": "ambiguous",
+    "question": "How long do I have to submit my claim?",
+    "golden_answer": "It depends on the claim: standard expense claims must be submitted within 30 days of the expense date, while the home office stipend has its own 60-day window from the purchase date.",
+    "evidence": [
+      {
+        "source": "expense_policy.md",
+        "phrase": "within 30 days of the expense date"
+      },
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "within 60 days of the purchase date"
+      }
+    ]
+  },
+  {
+    "id": "A03",
+    "type": "ambiguous",
+    "question": "How many approvals do I need?",
+    "golden_answer": "It depends on what needs approval: a pull request needs at least 2 approvals including one from a code owner; expenses need manager approval under $500, director approval from $500 to $5,000, and VP plus Finance approval above $5,000.",
+    "evidence": [
+      {
+        "source": "engineering_handbook.md",
+        "phrase": "at least 2 approvals"
+      },
+      {
+        "source": "expense_policy.md",
+        "phrase": "Expenses under $500 need manager approval"
+      }
+    ]
+  },
+  {
+    "id": "A04",
+    "type": "ambiguous",
+    "question": "How soon do I need to report it?",
+    "golden_answer": "It depends on what is being reported: a lost or stolen device must be reported within 1 hour of discovery; a SEV1 incident must be acknowledged within 15 minutes, a SEV2 within 1 hour, and a SEV3 by the next business day.",
+    "evidence": [
+      {
+        "source": "it_security_policy.md",
+        "phrase": "within 1 hour of discovery"
+      },
+      {
+        "source": "it_security_policy.md",
+        "phrase": "must be acknowledged within 15 minutes"
+      }
+    ]
+  },
+  {
+    "id": "A05",
+    "type": "ambiguous",
+    "question": "What is the maximum I can claim?",
+    "golden_answer": "It depends on the expense category: hotels are limited to $180 per night ($250 in San Francisco, New York, and London), the daily meal allowance is $60, and client meals and entertainment are limited to $100 per person.",
+    "evidence": [
+      {
+        "source": "expense_policy.md",
+        "phrase": "The hotel limit is $180 per night"
+      },
+      {
+        "source": "expense_policy.md",
+        "phrase": "The daily meal allowance is $60"
+      },
+      {
+        "source": "expense_policy.md",
+        "phrase": "limited to $100 per person"
+      }
+    ]
+  },
+  {
+    "id": "A06",
+    "type": "ambiguous",
+    "question": "How many weeks of leave can I take for a new baby?",
+    "golden_answer": "It depends on the caregiver role: primary caregivers receive 16 weeks and secondary caregivers 6 weeks, both at full salary, with at least 6 months of service required.",
+    "evidence": [
+      {
+        "source": "hr_leave_policy.md",
+        "phrase": "16 weeks of parental leave at full salary"
+      }
+    ]
+  },
+  {
+    "id": "A07",
+    "type": "ambiguous",
+    "question": "How many days can I be away from the office?",
+    "golden_answer": "It depends: remote work is allowed up to 3 days per week after probation, working from another country is limited to 20 days per calendar year, and paid annual leave is 24 days per year.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "up to 3 days per week"
+      },
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "up to 20 days per calendar year"
+      }
+    ]
+  },
+  {
+    "id": "A08",
+    "type": "ambiguous",
+    "question": "What is the monthly allowance?",
+    "golden_answer": "There are two monthly allowances: a $40 internet allowance for remote work and a $50 wellness stipend for gym or fitness costs.",
+    "evidence": [
+      {
+        "source": "remote_work_policy.md",
+        "phrase": "monthly internet allowance of $40"
+      },
+      {
+        "source": "benefits_overview.md",
+        "phrase": "wellness stipend of $50 per month"
+      }
+    ]
+  }
+]
